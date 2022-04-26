@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,2559" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,641" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="49">
       <x:String>System.Activities</x:String>
@@ -92,454 +92,165 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence Container" sap:VirtualizedContainerService.HintSize="678,2899" sap2010:WorkflowViewState.IdRef="Sequence_61">
+  <Sequence DisplayName="Main Sequence Container" sap:VirtualizedContainerService.HintSize="242,236" sap2010:WorkflowViewState.IdRef="Sequence_61">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Default="Documents\Revit RPA UiPath Automation\Template\construction-defaultmetric.rte" Name="source_path" />
-      <Variable x:TypeArguments="s:String[]" Name="source_path_break" />
-      <Variable x:TypeArguments="x:String" Default="DPR-Sandbox\zz-nCircle Test Model\Project Files\02 Model Authoring" Name="cloud_destination_path" />
+      <Variable x:TypeArguments="x:String" Name="source_path_file" />
+      <Variable x:TypeArguments="x:String" Name="cloud_destination_path" />
       <Variable x:TypeArguments="s:String[]" Name="cloud_path_break" />
       <Variable x:TypeArguments="sd:DataTable" Name="each_record_excel_config" />
       <Variable x:TypeArguments="x:String" Name="destination_local_folder_path" />
       <Variable x:TypeArguments="x:Int32" Name="length_n" />
       <Variable x:TypeArguments="x:String" Name="local_name_for_filesave" />
       <Variable x:TypeArguments="x:Int32" Name="index_of_local_filename" />
+      <Variable x:TypeArguments="x:Boolean" Name="output_flag" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Revit Automation Process Sequence" sap:VirtualizedContainerService.HintSize="636,2531" sap2010:WorkflowViewState.IdRef="Sequence_41">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <Parallel DisplayName="Start Process In Parallel" sap:VirtualizedContainerService.HintSize="594,51" sap2010:WorkflowViewState.IdRef="Parallel_1">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-        <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process | Revit" FileName="C:\Program Files\Autodesk\Revit 2020\revit.exe" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="StartProcess_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,160" sap2010:WorkflowViewState.IdRef="Sequence_93">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-        </ui:StartProcess>
-        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application | Handle Pop Up Run" sap:VirtualizedContainerService.HintSize="200,87" sap2010:WorkflowViewState.IdRef="NApplicationCard_15" ScopeGuid="f18db41a-3145-4404-afbe-6f1175e3fb5c" Version="V1">
-          <uix:NApplicationCard.Body>
-            <ActivityAction x:TypeArguments="x:Object">
-              <ActivityAction.Argument>
-                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-              </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_47">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <uix:NClick ClickType="Single" DisplayName="Click 'Run Alt+u'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_27" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f18db41a-3145-4404-afbe-6f1175e3fb5c" Version="V1">
-                  <uix:NClick.Target>
-                    <uix:TargetAnchorable DesignTimeRectangle="81, 617, 78, 28" ElementType="Button" FriendlyName="'Run Alt+u'" FullSelectorArgument="&lt;ctrl name='Run Alt+u' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Run Alt+u' role='push button' automationid='' check:text='Run Alt+u' /&gt;" Guid="78925ba6-c236-4fcb-96fe-60b54c18f92b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFIAAAAgCAYAAACBxi9RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJvSURBVGhD7ZnbbtpAEED7T/6Vwodw6W8A7hcU2jiFAOlLI6E0UR9AIX1PuIabuZQ7NOEhFZ0ytiFr6kG4olseZqQjeWfGlvawawvtK+A4SLDIA4VNZCbzBaIxDU4/nsHniwzjALqJvdfg8vLasmbGRiRKjMeTsFwuYbFYwHz+A2azOSOATtDNcvnLECrK3IiMxk4MiXjDdDpjdoCO0BXu3nVsRKLhx8cnmEymzB6gK+30zLIniMT9j7bH4wmzB+jqYuVsHTaRo9GYcQEpcjgcMS4gRQ4GQ8YFpMh+f8C4gBTZ6/UZF5Aiu93vEvkEQUUBxcYbOHfsPU5IkZ1OTyIo0gvq7UvuVvUaMtO2vuOFFNludyVyDgEUmRdy+bfgVYKQdqyLY+taDW5Ws1f9ZvXJgxSp6x2JpA0ZkfxLLhVYSQmkibo4xmuhN6+CZ/UDpKznyIIU2WrpEkmZMgQCye26ByI3TuNdNXmQIpvNlkSS4Dcmv75WwBO5IepO/VRNHqTIRqMpEXPy4Zw1zkVW21MBf4Ko28a7avIgRdbrDYkkwIeTzwq5hH+1xde5HIQ9CvgSZi0b9gi17XsdniUBUmStVpeIOflQ1p7PhkxhRj7u27w/X4fCQv/2vc7P+teQIqvVGuMCUmSl8nA0iF/zbZz6/wekyHK5yriAFFkqVRgX7HhHPkCxWGb2gHxH4uEX/n8sFErMHqArTUtY9gSReOj9/PzTWLL390VmB+gIXb2LfrDsCSLxsBtXJTboettovrsrMALoBN2goxMtDldXXy17gkgMlImH3nhei/uf+RPczrgSRYkYNpEcfx8s8iAB8Bv1gSyH9Bzg5wAAAABJRU5ErkJggg==" InformativeScreenshot="94e124517ed86530d1a3401cd0bdf964.png" ScopeSelectorArgument="&lt;wnd app='lmu.exe' cls='Qt5QWindowIcon' title='Autodesk Licensing' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
-                      <uix:TargetAnchorable.PointOffset>
-                        <uix:PointOffset X="-1" Y="-1" />
-                      </uix:TargetAnchorable.PointOffset>
-                    </uix:TargetAnchorable>
-                  </uix:NClick.Target>
-                </uix:NClick>
-              </Sequence>
-            </ActivityAction>
-          </uix:NApplicationCard.Body>
-          <uix:NApplicationCard.TargetApp>
-            <uix:TargetApp Area="571, 143, 778, 716" FilePath="C:\Program Files (x86)\Common Files\Autodesk Shared\Adlm\R17\lmu.exe" IconBase64="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" InformativeScreenshot="9106a4aa5c3403033a939f225919b82a.png" Selector="&lt;wnd app='lmu.exe' cls='Qt5QWindowIcon' title='Autodesk Licensing'/&gt;" />
-          </uix:NApplicationCard.TargetApp>
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-        </uix:NApplicationCard>
-      </Parallel>
-      <Delay DisplayName="Delay 10 Sec" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="594,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Handle Pop Up" sap:VirtualizedContainerService.HintSize="594,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_16" OpenMode="Never" ScopeGuid="441cb61d-9f9e-409b-8516-20be5e5ed5da" Version="V1">
-        <uix:NApplicationCard.Body>
-          <ActivityAction x:TypeArguments="x:Object">
-            <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-            </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,208" sap2010:WorkflowViewState.IdRef="Sequence_48">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="NClick_28" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="441cb61d-9f9e-409b-8516-20be5e5ed5da" Version="V1">
-                <uix:NClick.Target>
-                  <uix:TargetAnchorable DesignTimeRectangle="349, 196, 87, 29" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='Default Family Template File Invalid' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Close' cls='Button' title='&amp;amp;Close' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Default Family Template File Invalid' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Close' cls='Button' title='&amp;amp;Close' check:text='unchecked' /&gt;" Guid="abab60c5-67be-448e-9173-e6eab7c4ad2b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFsAAAAhCAYAAAC2j9c+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGxSURBVGhD7ZbNccQgDEbdgmuhGyrJjVZohSpydgfuQDF/G4Qh0RrD4B0d3mAGy8k8PrQs+74DMwaWPRCWPRAke/n6Zm4G+UWTwstMG8gvmoQXtm2DdV15bBjJsmMBcw3rjyy79AHmPciyOdltcLIHQ5bNyW5jumQbJWBZlgQJOqxpuYBQ5lTzJMiy+ybbgBJYrkNLkNo/P132NMl2iRYKTGEtwsm+BQ3yaBkxwTVKsk9tR2q0bk/G77oAZWq1eK0HcyTbCcnaR4FctpeV1oVWFIUbBSKVqNXr+XSSiP9DK2TZ3ZJ9SbY9DYU0OsHhW+kzolTrN+q/09XCc5NdrUlFxh/dTKKrje0D01O2hSy7W7Lz417hfdkB930rM7xP3Ny7mSPZea+tgGTXNqjaOvzfcPXEze0BWXa3ZDv8jeR0/TtSWLtn2zlOaCLUzpPavCcXa+XfV89WJkl2JCQ86aGp/Fy2Jb/6ofVX+yisHXjh9fUekGX3TfbnM0Wy03TVKNU9EbJsTnYbk/Xsz4csm5PdxtvJjsJ5vDaSZTP3gfyiSeFlpg3kN50wfWHZA2HZw9jhB7pczI9qyfzxAAAAAElFTkSuQmCC" InformativeScreenshot="0ace00b6db129469619a81a4047d15de.png" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='#32770' title='Default Family Template File Invalid' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
-                </uix:NClick.Target>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </uix:NClick>
-              <Delay DisplayName="Delay 5 Sec" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
-            </Sequence>
-          </ActivityAction>
-        </uix:NApplicationCard.Body>
-        <uix:NApplicationCard.TargetApp>
-          <uix:TargetApp Area="722, 332, 458, 290" FilePath="C:\Program Files\Autodesk\Revit 2020\revit.exe" IconBase64="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" InformativeScreenshot="14616ae001d0c9312ddc94487f026e07.png" Selector="&lt;wnd app='revit.exe' cls='#32770' title='Default Family Template File Invalid'/&gt;" />
-        </uix:NApplicationCard.TargetApp>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </uix:NApplicationCard>
-      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application | Create Project | Collaborate | Cloud Migration" sap:VirtualizedContainerService.HintSize="594,2195" sap2010:WorkflowViewState.IdRef="NApplicationCard_17" OpenMode="Never" ScopeGuid="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Version="V1">
-        <uix:NApplicationCard.Body>
-          <ActivityAction x:TypeArguments="x:Object">
-            <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-            </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="560,1906" sap2010:WorkflowViewState.IdRef="Sequence_54">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518,1812" sap2010:WorkflowViewState.IdRef="Sequence_51">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="Create Project | Browse " sap:VirtualizedContainerService.HintSize="476,1474" sap2010:WorkflowViewState.IdRef="Sequence_52">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Shortcuts="[d(hk)][d(ctrl)]n[u(ctrl)][u(hk)]">
+          <Sequence DisplayName="Excel Read Sequence" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_84">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[each_record_excel_config]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="C:\Users\KishanT\OneDrive - DPR Construction\Documents\Revit RPA UiPath Automation\Autodesk Revit Config.xlsx" />
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[each_record_excel_config]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_80">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                  </uix:NKeyboardShortcuts>
-                  <uix:NClick ClickType="Single" DisplayName="Click '&amp;Browse...'" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="NClick_31" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Version="V1">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable DesignTimeRectangle="290, 65, 90, 24" ElementType="Button" FriendlyName="'&amp;Browse...'" FullSelectorArgument="&lt;wnd ctrlid='2238' title='&amp;amp;Browse...' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='2238' title='&amp;amp;Browse...' check:text='&amp;amp;Browse...' /&gt;" Guid="cad77fce-397d-4c7e-928d-f9cd82a71c69" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAAcCAYAAADoQggJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFvSURBVGhD7ZXblcQgCEDtyW5oxlZsIEVYih2kA1YSMaiZnZ+J7Nnh454zIHnMBY3b9x2N9Zh4JUy8Ep34bduMB5GuJ/E5Z+MBTLwSJl4JE6+EiVfCxCuxTnwK6J1DJ4B4U/clrBXvA6ZX8ZehJz4COogtH4B2AWDk2rYzRI6vP9ZrPicM/vydgm+7yXW1fC+PIdE1+qwV3wQICTV/HTsRQcSHTGrQkb8EA0CtKXmS3DUjYyzrUVzT3kE2XxG9ief4VV7GVV6Es1mHVMrzjmmNoYYOolujGbGuiJ54nsYxfxdXWcekxzrhfMSUI6v/SIsGTM/8O+iJpzOe4knOKW4+akpcasF79CHVtSK9TD8fWVDz57lPu6O/Vwc9d9odv8QfZq34tt3Flqf8OJVdrfzzJFJ8ILl5be26Pzdnei7Xj2LfxR9mnXijY6n4NnUDd7X/HZt4JUy8EiZeCROvxFvxxnNI1514Yx0mXgkTr8KOP2jfQ4bHTSn6AAAAAElFTkSuQmCC" InformativeScreenshot="c30dd69dae6e3d65a87a6aa5fe979887.png" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='#32770' title='New Project' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
-                    </uix:NClick.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </uix:NClick>
-                  <Assign DisplayName="Source Path Split" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="Assign_1">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="s:String[]">[source_path_break]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="s:String[]">[Split(source_path, "\")]</InArgument>
-                    </Assign.Value>
-                  </Assign>
-                  <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Source Path Selection" sap:VirtualizedContainerService.HintSize="434,1097" sap2010:WorkflowViewState.IdRef="NApplicationCard_19" ScopeGuid="e31d8c5a-0273-476b-82d9-3aa5f395ca31" Version="V1">
-                    <uix:NApplicationCard.Body>
-                      <ActivityAction x:TypeArguments="x:Object">
-                        <ActivityAction.Argument>
-                          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-                        </ActivityAction.Argument>
-                        <Sequence DisplayName="Travel To Select Source Path Do" sap:VirtualizedContainerService.HintSize="376,808" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                    <Sequence DisplayName="Set All Variable Values | Sequence" sap:VirtualizedContainerService.HintSize="476,752" sap2010:WorkflowViewState.IdRef="Sequence_92">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign DisplayName="Source File Path From Local" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[source_path_file]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[CurrentRow.Item("Source Path").ToString]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign DisplayName="Length Of Destination Local Path " sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[length_n]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">[Split(CurrentRow.Item("Destination Local").ToString, "\").Length]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign DisplayName="Local File Name to Save" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[local_name_for_filesave]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[Split(CurrentRow.Item("Destination Local").ToString, "\")(length_n-1)]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign DisplayName="Filename to Save Local in Destination Folder" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[index_of_local_filename]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">[CurrentRow.Item("Destination Local").ToString.IndexOf(local_name_for_filesave)]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign DisplayName="Destination Folder Name Local" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[destination_local_folder_path]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[CurrentRow.Item("Destination Local").ToString.Remove(index_of_local_filename)]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign DisplayName="Cloud Destination " sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[cloud_destination_path]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[CurrentRow.Item("Destination Cloud").ToString]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign DisplayName="Cloud Destination List" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="s:String[]">[cloud_path_break]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="s:String[]">[Split(cloud_destination_path, "\")]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </Sequence>
+                    <Sequence DisplayName="Revit Automation Process Sequence" sap:VirtualizedContainerService.HintSize="476,1164" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Parallel DisplayName="Start Process In Parallel" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="Parallel_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process | Revit" FileName="C:\Program Files\Autodesk\Revit 2020\revit.exe" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="StartProcess_1">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,223" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="C:\Users\KishanT\OneDrive - DPR Construction\Documents\Revit RPA UiPath Automation\Template\construction-defaultmetric.rte" Version="V1" />
-                          <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts | Enter to Open rte File" sap:VirtualizedContainerService.HintSize="334,178" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1" />
-                          <uix:NClick ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="NClick_36" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Version="V1">
-                            <uix:NClick.Target>
-                              <uix:TargetAnchorable DesignTimeRectangle="109, 176, 90, 24" ElementType="Button" FriendlyName="'OK'" FullSelectorArgument="&lt;wnd ctrlid='1' title='OK' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='OK' check:text='OK' /&gt;" Guid="5f2913d2-ddd2-408f-8960-d33f60ffea7c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAAcCAYAAADoQggJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADySURBVGhD7dbBDYQgEIVheqIbmqEVGrAISqEDOpgVNuiwmuzuQWfGvMMfjeDlwyCu1kro/gAvFOCFmuCXZUEXxq0P8KUUdEGAFwrwQgFeKMALBXihTMLn6Mk5t+Vjfo/lSN5HymNuCn08pP1dLZmD7+gctyQKA5/Dt3vnKeb9XU0Zg2/IJ5gDnF8Vo7dswfMveqotSKDUx7169Nbz4Bt6XPf203l6sgX/61azPuv/gpDmeYoyBv/Hz7Vkip6deJRlDr71eZzcjouHrYgtyvZMRybhnxDghQK8UIAXCvBCAV6or/Dourj1BI/uC/BCAV6kSi+cyu4CODqT7wAAAABJRU5ErkJggg==" InformativeScreenshot="a93cb5ac89777e709be3175720a99d09.png" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='#32770' title='New Project' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
-                            </uix:NClick.Target>
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                          </uix:NClick>
-                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_3">
-                            <ui:CommentOut.Body>
-                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_87">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <uix:NClick ClickType="Single" DisplayName="Click 'C:\Users\KishanT\OneDri…'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NClick_65" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e31d8c5a-0273-476b-82d9-3aa5f395ca31" Version="V1">
-                                  <uix:NClick.Target>
-                                    <uix:TargetAnchorable DesignTimeRectangle="21, 189, 86, 60" FriendlyName="'C:\Users\KishanT\OneDri…'" FullSelectorArgument="&lt;wnd ctrlid='13000' /&gt;&lt;ctrl name='C:\Users\KishanT\OneDrive - DPR Construction\Documents' role='list item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='13000' /&gt;&lt;ctrl name='C:\Users\KishanT\OneDrive - DPR Construction\Documents' role='list item' automationid='' check:text='C:\Users\KishanT\OneDrive - DPR Construction\Documents' /&gt;" Guid="c7aa001d-ec55-4691-81f7-5f047e8ad104" ImageBase64="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" InformativeScreenshot="a9b3ea9df05a7673e27cee5114ca1271.png" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='#32770' title='Choose Template' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive" />
-                                  </uix:NClick.Target>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </uix:NClick>
-                              </Sequence>
-                            </ui:CommentOut.Body>
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                          </ui:CommentOut>
-                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_4">
-                            <ui:CommentOut.Body>
-                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_88">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[source_path_break]">
-                                  <ui:ForEach.Body>
-                                    <ActivityAction x:TypeArguments="x:String">
-                                      <ActivityAction.Argument>
-                                        <DelegateInArgument x:TypeArguments="x:String" Name="item" />
-                                      </ActivityAction.Argument>
-                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_70">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <uix:NClick ClickType="Double" DisplayName="Click 'C:\Users\KishanT\OneDri…'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_63" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e31d8c5a-0273-476b-82d9-3aa5f395ca31" Version="V1">
-                                          <uix:NClick.Target>
-                                            <uix:TargetAnchorable DesignTimeRectangle="21, 189, 86, 60" FriendlyName="'C:\Users\KishanT\OneDri…'" FullSelectorArgument="[String.Format(&quot;&lt;wnd ctrlid='1' title='FolderView' /&gt;&lt;ctrl name='Folder View' role='list' /&gt;&lt;ctrl name='{0}' role='list item' /&gt;&quot;, item)]" Guid="c27b6e39-806f-4eaf-8fa4-fb5949349d9c" ImageBase64="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" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='#32770' title='Choose Template' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive" />
-                                          </uix:NClick.Target>
-                                        </uix:NClick>
-                                      </Sequence>
-                                    </ActivityAction>
-                                  </ui:ForEach.Body>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </ui:ForEach>
-                              </Sequence>
-                            </ui:CommentOut.Body>
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                          </ui:CommentOut>
-                        </Sequence>
-                      </ActivityAction>
-                    </uix:NApplicationCard.Body>
-                    <uix:NApplicationCard.TargetApp>
-                      <uix:TargetApp Area="555, 262, 790, 494" FilePath="C:\Program Files\Autodesk\Revit 2020\revit.exe" IconBase64="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" InformativeScreenshot="a52fd91c90797b90d8edefb76d059872.png" Selector="&lt;wnd app='revit.exe' cls='#32770' title='Choose Template' /&gt;" />
-                    </uix:NApplicationCard.TargetApp>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </uix:NApplicationCard>
-                </Sequence>
-                <Delay DisplayName="Delay 5 Sec" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="476,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="476,51" sap2010:WorkflowViewState.IdRef="CommentOut_6">
-                  <ui:CommentOut.Body>
-                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_90">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_5">
-                        <ui:CommentOut.Body>
-                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="418,158" sap2010:WorkflowViewState.IdRef="Sequence_89">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <Sequence DisplayName="Collaborate Workflow" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_53">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <uix:NClick ClickType="Single" DisplayName="Click 'Collaborate'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_37" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Version="V1">
-                                <uix:NClick.Target>
-                                  <uix:TargetAnchorable DesignTimeRectangle="600, 36, 61, 15" ElementType="Text" FriendlyName="'Collaborate'" FullSelectorArgument="&lt;ctrl automationid='Collaborate' /&gt;&lt;ctrl automationid='mContent' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='Collaborate' /&gt;&lt;ctrl automationid='mContent' role='text' check:text='Collaborate' /&gt;" Guid="ded70457-8aa8-47a5-af2e-e7ea6cb85ad1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAATCAYAAADPsWC5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAExSURBVFhH7ZTRDYMwDEQ7EouwCGswBmOwRnaiuUqHLsYB81NVxR9P2MQ5myPwKqVsTydNqKQJlTShkiZUXBPGcdyGYfiA2KuxoHZd10PcI1LzLRoTMBSGW5aluad5j18z4Y5+YwLeeuSBPf7CBGzARl20sIaoYdpU42ma9nrEWo/9XJvneV+76kNN5J4+c71nNakHGhOuvn9s5kAU5cP2YsXWsJ+nddZHDVNsHWObQ1s1wifBW4fLHLY3ANaRE68GUOtOHxDRp6bCEwLC/4Q7wzG2e6Bva3TtrglRfU9TaUygq2oEBHQAxlZYmzJG7dmR55H0tCJ9rvQZM+99Ro0JgGKETbw128QbAPuR4wq0Bm8YV8CHBtE+oKdPbR57q8n74GDCE0kTKmlCJU2opAmlbG/46i/abEJ4+QAAAABJRU5ErkJggg==" InformativeScreenshot="737efb14d9b7750cc0349ffec189b63e.png" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='HwndWrapper*' title='Autodesk Revit 2020.2 - UNREGISTERED VERSION - [Project1 - Floor*' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
-                                    <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                        <uix:Target DesignTimeRectangle="590, 34, 81, 20" ElementType="Button" FriendlyName="'Collaborate'" FullSelectorArgument="&lt;ctrl automationid='Collaborate' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='Collaborate' role='push button' check:text='Collaborate' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFUAAAAYCAYAAACLM7HoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFeSURBVGhD7ZTRDYMwDEQ7EouwCGswBmOwBiuwAitQXaVDrutAksZSPvzxhJOYi30kvLZtO4O2hKkOhKkOhKkOhKkOhKkOhKkO/GXqOI7nMAwfEFs5GuSu6/oTp8jJ6Y0qU9Ekml2W5WtOjlP0ZqqHfpWpOJU5BlqEqQYoAIVYa4Q5RH4A2YSMp2m68hHLfLzPtXmer7WnfaiJsaXPsZzTmtQrocrUp/8nimGDLJLmpWKJzuF+ltbdPvIDSHQeYz2GdkrjjuYn1VrHKWDzqYawjjGxcgC1SvYBOfrUlPAEl9D8n1rSLGP9DvR1jlwrNTVX39KsocpUfnVpLAqSDTHWhcomGCP37orzClpaOfs86TPmuObKS6pMBSyOsGhrTRdtNYT3McYTyBycQDwBTQS5+4CUPrV5zbUm50uoNjVIE6Y6EKY6EKY6EKY6EKY68DqO4wza0r2p+76b8/1ynG8cLxpXz+TTxQAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
-                                      </scg:List>
-                                    </uix:TargetAnchorable.Anchors>
-                                  </uix:TargetAnchorable>
-                                </uix:NClick.Target>
-                              </uix:NClick>
-                              <uix:NClick ClickType="Single" DisplayName="Click 'Collaborate'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_38" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Version="V1">
-                                <uix:NClick.Target>
-                                  <uix:TargetAnchorable DesignTimeRectangle="150, 57, 67, 72" ElementType="Button" FriendlyName="'Collaborate'" FullSelectorArgument="&lt;ctrl automationid='ID_COLLABORATE' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='ID_COLLABORATE' role='push button' check:text='Collaborate' /&gt;" Guid="994ca492-04ff-45d6-b826-655b31f3c095" ImageBase64="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" InformativeScreenshot="1335ba57b0438518e1c323cc27c1177e.png" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='HwndWrapper*' title='Autodesk Revit 2020.2 - UNREGISTERED VERSION - [Project1 - Floor*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
-                                </uix:NClick.Target>
-                              </uix:NClick>
-                              <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_39" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Version="V1">
-                                <uix:NClick.Target>
-                                  <uix:TargetAnchorable DesignTimeRectangle="18, 134, 330, 41" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='Collaborate - Revit Model Not Saved' cls='DirectUIHWND' /&gt;&lt;wnd cls='Button' title='Save the model and continue' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Collaborate - Revit Model Not Saved' cls='DirectUIHWND' /&gt;&lt;wnd cls='Button' title='Save the model and continue' check:text='unchecked' /&gt;" Guid="9b436880-a6be-4f3f-bdae-218ede377d26" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAU4AAAAtCAYAAADBRIIpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUASURBVHhe7Zq7bt1GEIb1BnqU9G7yKOncpnWXR4hSpkorpHFhQE0ApUkZII0DF0IMuJAR+IIEAgy7MMDsldwd7mVI+vCcSN8HLCiSu7OzuzP/mXPsswEAABaBcAIALGQUzl//+kCj0Wi0RotkwgkAAGUQTgCAhaiE8/z8nCtXrly5BrrCmXYGAABlxQkA8NCh4gQA2AAVJwCAAipOAIANUHECACig4gQA2AAVJwCAAipOAIANUHECACig4gQA2MDBK84/Xn8Mf91fri5fDI+uP4W7/yc31y+Hs4t3w02472HXfHZ5F+72Y6mfe+H24wT9gi/HbhXn97+9H86evBh++v3f8GQFz2+djawdIWFbIJz7gXDCKXDQivOfj5+Hr34wgb5SPF0wPrkdrsK95254fEThLCUuwrkfpyCcpyrecFh2/Y1zvXgagTRjHj8PtycCwulBOBHOh8xBK87IOvH0wtkVpDfvhkem3/g1PqlQa8ntnieB7xJhHP9yuHgTXmR8Gi4uYp/Qgo0onLkdWSlr5/FE37MxYS3L5pnGpTj78b1Zx5UdI8Sg5W9tb0ca52Ip7llBjDR+zpA/7yT9e3vT9qsdA6mt/vq8LVkYuP7Cp9zndtzA4di14oysEs+YAI1Eubm+rSe0G1/4qm9sxoB1/VP7xTETLoiFP86GsTmJvJ9DJtKSeao2s2chkeU8mV1FnyhyiX89f917keApzXMxeB8Ue9bxU+JFJhUXs/5L339mr7o3bb+qMbDIjk44nZ0FcQP7sKri/PbZ38PXP75a3KJw2qavPENwu3GKgMkCy4+dgtdg38dAdIkoP8HLAR3RJI0l67dinlnCGHwy5nswn6dgM5vfJ3AxYRf4W1pzE4Xw5nur8HNGeYxDtTcav8o+yHF9O+Xzd33iOMU5wH5srjitCEYBXNus+C7FBaMZWwy2zP6UoDLIrY1RSF0yp+OmloltQi1pZv1ToVgxTz/xAukHgRCniURQKn0y2wp/S/5JWuei27OOn5Lq+g3Vd7nYdv0y1GJACmfbjkI4Xf90/6ZWixvYh1UV51pslWkP/ZufX4cny/HJGIPPB30WxDJB0k9t93fyrppMdWpJs0YEWshEtBRFw9qOz6rzrBHOtr8l/yb657J2z4p7EGn5XX136sJZWQ/szlF+4/wSoulIg6kQWC7wxLMYxFlQWmpf3xrUkqaZJCvmkYloKc3t5onPavPMPjzk178wX89OQsm/EcW56Pas46ek5XftnZin65ehFgNrhFP2yewozgGOwy4V5zrRNJXALEF8sFUDK9zLpPXicmvsVRIx62/mCP+YUKQgCppkWzpPlkCBrnAaivOkexbvUzvO1/xZz9+SfyOKc7HjNcLS81PS8ru/Nxq/DPLeIPdDY0d+mIzrE3ZmPrfiEw7GrhXn+kozfN0TTQajD77w3iZUIaiLSZjgg3Nqs4DPCLbifOaJKtkMS+ZxfYUwaYTTku1JcZ5kDbaZeUq2W/6W/EvpnYtuz3R+Slrr7+3NYr+CL3I/Nq1P7KuzHfuYNrMLu3PQivPpn3fuoDd/PQcAODK7VZz2/25+98vbcAcAcD84aMUJAHBf2PU3TgCA+wYVJwCAAipOAIANUHECACig4gQA2AAVJwCAAipOAIANqCrOKJ5cuXLl+tCvFpVwAgDABMIJALCQqnDSaDQard4io3ACAIAOhBMAYBHD8B/Io+4cbB/CigAAAABJRU5ErkJggg==" InformativeScreenshot="ce0893d7692813bcc6203cb1547780b8.png" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='#32770' title='Collaborate - Revit Model Not Saved' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
-                                </uix:NClick.Target>
-                              </uix:NClick>
-                              <uix:NClick ClickType="Single" DisplayName="Click 'Documents'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_42" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Version="V1">
-                                <uix:NClick.Target>
-                                  <uix:TargetAnchorable DesignTimeRectangle="21, 130, 86, 60" FriendlyName="'Documents'" FullSelectorArgument="&lt;wnd ctrlid='13000' /&gt;&lt;ctrl name='Documents' role='list item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='13000' /&gt;&lt;ctrl name='Documents' role='list item' automationid='' check:text='Documents' /&gt;" Guid="c9436386-ca89-4c79-af8d-b8c55335a9c6" ImageBase64="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" InformativeScreenshot="39889e8d4540c278fc17550ec66509b9.png" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
-                                </uix:NClick.Target>
-                              </uix:NClick>
-                              <uix:NClick ClickType="Double" DisplayName="Click 'Revit RPA'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_43" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Version="V1">
-                                <uix:NClick.Target>
-                                  <uix:TargetAnchorable DesignTimeRectangle="138, 243, 388, 19" FriendlyName="'Revit RPA'" FullSelectorArgument="&lt;wnd ctrlid='1' title='FolderView' /&gt;&lt;ctrl name='Folder View' role='list' /&gt;&lt;ctrl name='Revit RPA UiPath Automation' role='list item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='FolderView' /&gt;&lt;ctrl name='Folder View' role='list' /&gt;&lt;ctrl name='Revit RPA UiPath Automation' role='list item' automationid='' check:text='Revit RPA UiPath Automation' /&gt;" Guid="2b0ca3fd-aa8a-4c00-bf38-3382cd97fac0" ImageBase64="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" InformativeScreenshot="eea3742f896521db2250a26b90569699.png" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
-                                </uix:NClick.Target>
-                              </uix:NClick>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'File &amp;name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Text="Sample Test" Version="V1">
-                                <uix:NTypeInto.Target>
-                                  <uix:TargetAnchorable DesignTimeRectangle="214, 401, 429, 15" ElementType="InputBox" FriendlyName="'Project2'" FullSelectorArgument="&lt;wnd ctrlid='13006' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='13006' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="550b3640-a17a-43e0-a3d9-717e3438951d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAbEAAAATCAYAAAAeczPgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFlSURBVHhe7drRcYMgAIBh53Ig53Eal8kwVBGrKDY2TXJH8313PoCG5O0/iE0AgEqJGADVEjEAqiViAFRLxACo1jFitz60TROa76sLQ7p12bRG24dbGl62/9zut7T9r1cE4B8rR2wbkqELzSNBekThu7vvgg6ha9qgYwAs7kcsxmPcjaX5vtvszrKdUpqbojeNlzWyZ7YRmtZd5psxVrfQt+v4uOua7osYAKu7Ebv17RykFKN8Z7SO43PrIK2RAjjPbubnYK1rJbvvzvx0D4CPdP8/sSUc+4iUxtsd2nRvv1a81l3dIUhn8zGGdmEA5C4cJyb7+dK4FLEray2K8wIGQNnjEYtxuXKcWDg2HO+cHifujx8FDIATf4jYKEZmc0yYprNns2fG62R+CdoQXxyZX+yIYdw8s8wDwOQYsWd452v5AHysJ0dsPj7MX6UHgNd4zU4MAN5AxACologBUC0RA6BSIXwB1jjgY4lS5dgAAAAASUVORK5CYII=" InformativeScreenshot="39793feca423027533e74095e488e6f8.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
-                                    <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                        <uix:Target DesignTimeRectangle="137, 402, 69, 13" ElementType="Text" FriendlyName="'File &amp;name'" FullSelectorArgument="&lt;wnd ctrlid='13008' title='File &amp;amp;name:' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='13008' title='File &amp;amp;name:' check:text='File &amp;amp;name:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEkAAAARCAYAAACRroFGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD/SURBVFhH7ZTRDcMgDESZinm8DcOwC7OwgRuITC+Ok/DTUlX+eJJz2IacDKHWys49btIEbtIEbtIEa0wqiWNMXKy1H+QzJjUTQuBwgDiLOW7SxpMJbtLGlQnWJLV4TFvkVOyaRO+ppLyvlRSHNmp7PjFFyS2cRgw9dd3Qz2dYfN0yU9OxTsxTvcYPZuKgc0SnfPzRpmH8tCfWyvrG2knqhzLMtGqsb12Pva1cWceajtpTsd4kKw/ROVirr4ruacWoTbL4TWqjD1fJQvc69dj1/j5p3Yxv9mw5P3fdRMPR13W6F3xneMwjkd37Krb27Pq3TPoz3KQJ3KQJ3KRHKr8AycItt6zG7isAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
-                                      </scg:List>
-                                    </uix:TargetAnchorable.Anchors>
-                                  </uix:TargetAnchorable>
-                                </uix:NTypeInto.Target>
-                              </uix:NTypeInto>
-                              <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_45" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Version="V1">
-                                <uix:NClick.Target>
-                                  <uix:TargetAnchorable DesignTimeRectangle="565, 452, 98, 23" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' check:text='unchecked' /&gt;" Guid="7a9d6f36-9301-4cc1-aa8a-92594711338b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGYAAAAbCAYAAACOY/p9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEqSURBVGhD7ZbBEcMgDASpiXJUDLXQgIugFDpwB4rFGCKIJ5NXfEr02Acg56HlRMK+7+zg4WJAcTGgTGK2bXNuQnsQXsTUWp0v42JAcTGguBhQXAwotsSUxDEEDicxleu6H8CQmMwUIqei1pTV+W9hTAxxvjgrKY4UhS6vpUvXq++n5GnZOBgSUznT2cx3Sck0zqWe8rq/CBZJMXHpaxBMiRlIk7Wg5e0JvdGTJJ0kVdu4TuKd2BTTOG9+a7QaR1MCCqcoTT9q+x5oQlbsiJGG6hHWG7w0ur03y5qI1D84EapGHCiGEiO3X4+fZ0rG23MQRYJOhIhbR1XbU78FmCBDYv4LU2LGDV+4qrWOJwYUFwOKiwHlIzHOPWgPwiTGwcHFgOJiQHExkOz8AEgIdvI2igkEAAAAAElFTkSuQmCC" InformativeScreenshot="79fe56afbf80b22933a1dd84b563aeb9.png" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
-                                </uix:NClick.Target>
-                              </uix:NClick>
-                              <uix:NClick ClickType="Single" DisplayName="Click 'In BIM'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_46" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Version="V1">
-                                <uix:NClick.Target>
-                                  <uix:TargetAnchorable DesignTimeRectangle="19, 255, 362, 15" ElementType="RadioButton" FriendlyName="'In BIM'" FullSelectorArgument="&lt;ctrl automationid='CollaborateUsingA360Radio' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='CollaborateUsingA360Radio' role='radio button' check:fulltext='In BIM 360 Document Management&amp;#xD;&amp;#xA;In BIM 360 _Document Management' /&gt;" Guid="7b55b53f-e823-4b23-87e4-c0e390f9e3be" ImageBase64="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" InformativeScreenshot="0e3b87f1d5657d8fa8cca1b424f30937.png" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='HwndWrapper*' title='Collaborate' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
-                                </uix:NClick.Target>
-                              </uix:NClick>
-                              <uix:NClick ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_47" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Version="V1">
-                                <uix:NClick.Target>
-                                  <uix:TargetAnchorable DesignTimeRectangle="224, 356, 75, 23" ElementType="Button" FriendlyName="'OK'" FullSelectorArgument="&lt;ctrl automationid='OKButton' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='OKButton' role='push button' check:text='OK' /&gt;" Guid="4cdfb62d-5206-440b-b9b3-fbdd545d887e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEoSURBVGhD7dbBbYMwFMZxew3EFBFiiA6BGKHHXit5gqzgPcIAcO/F7MAGr7XdEidx1JAnmRfpO/wlgjn99GxHLctC6LmAx2jFUx9f6MGyePM8o38CHiPgMQIeI+AxAh4jcXhutNRVmpRSIV33ZCe3ro+2o0NvaXLxnf9d6ZbMcP6mVKLwIlxNvZ3O706GmgQnxQtrV7glE4Pn3Ei2q6g1w81aCrY+B+h9Ju4vQXgnMk0eI0xYa2hY8T7pvbmc0D2Sg+cn6ZDfgulaPOM06V/M629L9hqT5/He0sk70vFni9fJxbFHgvA2nnkBW2e/L5UYPF+8WS/PsrhN79y2mdu5ZKLwfBFk6/+8fQDF4b1SwGMEPEbAYwQ8RsBjdBcPPdYNHtoe8J5uoW8kJN8DaiSpSwAAAABJRU5ErkJggg==" InformativeScreenshot="e7eb273d2e2d09c05b1b778a4c255f51.png" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='HwndWrapper*' title='Collaborate' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
-                                    <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                        <uix:Target DesignTimeRectangle="253, 359, 17, 16" ElementType="Text" FriendlyName="'OK'" FullSelectorArgument="&lt;ctrl automationid='OKButton' /&gt;&lt;ctrl name='OK' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='OKButton' /&gt;&lt;ctrl name='OK' role='text' automationid='' check:text='OK' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAAUCAYAAABiS3YzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADcSURBVDhP7ZLRDYMgEIZhDeMUxjhEhzCO0BWaMIErsIcOoCPALH970OKd0qS1pk8+fAly53fHgfLe42hOaT7wC/+RusmiLTSUUgFddrCzS/HJtqg6i9nFPfoudAMzLjlCGoUlOjsve4NBzX7i0hBbFSWS1LkJti3QmFEkEFyU1qEB2eELJh1g6nxS6KgxGJP0hmstT8RZpFS52h5lHYsz1NDPIutc4rNOSXrhnfboH6Mq2YVx9s80NKGz+UlKxJuWs4rHfXP7mddCCCkRE799p1K8kR7BKc0H9uNxB46BehxAavd1AAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
-                                      </scg:List>
-                                    </uix:TargetAnchorable.Anchors>
-                                  </uix:TargetAnchorable>
-                                </uix:NClick.Target>
-                              </uix:NClick>
-                            </Sequence>
-                          </Sequence>
-                        </ui:CommentOut.Body>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:CommentOut>
-                    </Sequence>
-                  </ui:CommentOut.Body>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </ui:CommentOut>
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="476,51" sap2010:WorkflowViewState.IdRef="CommentOut_7">
-                  <ui:CommentOut.Body>
-                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="284,158" sap2010:WorkflowViewState.IdRef="Sequence_91">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Cloud Path Finder Sequence" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_74">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Collaborate using the cloud" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_20" OpenMode="Never" ScopeGuid="c093ba49-8d83-4b62-ae18-7340559d93fe" Version="V1">
+                        </ui:StartProcess>
+                        <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application | Handle Pop Up Run" sap:VirtualizedContainerService.HintSize="200,87" sap2010:WorkflowViewState.IdRef="NApplicationCard_15" ScopeGuid="f18db41a-3145-4404-afbe-6f1175e3fb5c" Version="V1">
                           <uix:NApplicationCard.Body>
                             <ActivityAction x:TypeArguments="x:Object">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_75">
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_47">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Assign DisplayName="Source Path Split" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="Assign_2">
-                                  <Assign.To>
-                                    <OutArgument x:TypeArguments="s:String[]">[cloud_path_break]</OutArgument>
-                                  </Assign.To>
-                                  <Assign.Value>
-                                    <InArgument x:TypeArguments="s:String[]">[Split(cloud_destination_path, "\")]</InArgument>
-                                  </Assign.Value>
-                                </Assign>
-                                <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434,374" sap2010:WorkflowViewState.IdRef="ForEach`1_8" Values="[cloud_path_break]">
-                                  <ui:ForEach.Body>
-                                    <ActivityAction x:TypeArguments="x:Object">
-                                      <ActivityAction.Argument>
-                                        <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
-                                      </ActivityAction.Argument>
-                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_77">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <uix:NClick ClickType="Double" DisplayName="Click 'DPR Construction'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_66" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c093ba49-8d83-4b62-ae18-7340559d93fe" Version="V1">
-                                          <uix:NClick.Target>
-                                            <uix:TargetAnchorable DesignTimeRectangle="40, 279, 144, 20" ElementType="Text" FriendlyName="'DPR Construction'" FullSelectorArgument="&lt;ctrl name='Autodesk.Revit.UI.Collaborate.ViewModels.ForgeDmHub' role='list item' /&gt;&lt;ctrl name='DPR-Sandbox' role='text' /&gt;" FuzzySelectorArgument="[String.Format(&quot;&lt;ctrl name='Autodesk.Revit.UI.Collaborate.ViewModels.ForgeDmHub' role='list item' /&gt;&lt;ctrl name='{0}' role='text' automationid='' check:text='{0}' /&gt;&quot;, item)]" Guid="e07f332b-8567-4f74-88be-ce7fbceebd32" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJAAAAAUCAYAAABiZ7R2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANHSURBVGhD7ZhNrtMwEIDjRdVbcAWWVTY9TyULqVdgwwX6ItQTIE5QZVFYILFAYoMQr0qXcAc2rYeM7UnGjp2Eug8E8idViu3Ef/NlnPcKyGQSyAJlksgCZZLIAmWSyAJlksgCZZIo3r5/1BdKNVCVAoqi6H6irKBRSrcjTVU67WXV2BaAWrrP8rYQvC8hJNRsnH8FVcvBHv0Jzvs1LITZbyE2cLioNn5n2K9L2J2u9q40jtslrHYnuE6srfjw5bu+MAKVUDWuMDy4WCYxSDhZmzYUiK6VqkEKty+CnhOytjXm/mpCuFvgc7oHqqmg/AvCEEaSBYjNAS52Dkod4XWFgb6vQHPpjrCQQAiXhl8jvOwHKxY8/dYyeZ6S/06g4xaWTB7OvTPQXCYF4ps2VyCTgcLH0lRQ9Xg2PeNv0GcrYLiNUrpZA45D95ljxjxftXM297hz9OfM56GzcGBe/sswHNP0ZfapzbL2E+HWYw+Plc3hYksuXCDKVN1cmHTYB9XTERWro7Ewy22XtBcrR9KbBTIb3t/vbB4LBCc2BmGC1rfzMUgSChj//vDFJoZSC2/+YYH4uBy+F7rMBMKxuEw4Jyrr624d5ggfe4lCTGWYWLsj1nkP63IHp2s/dqgOIYFIxpi4xcevP/TFqEBsI0gS/PFNoGBNbRAPqg8GxBeB5BgNuM1Kfr9DgcLP+2U/sxAxgcya+74Q3p8vuF9GlPoJn1897/b22ctPtqVnbgbSZTzuWMY0MphM4n9D+XVIJ1BEMKJ48+6bvogJhEGgxYYWTjjB8jaag32EgoPcKhCBc6A3ncq3CBRb51MKNAf919eMbyAtz6oPui8eycX/yvLrOoFGvruQgqpDAumAsA0bWzgPFoLlYBD0xrptGBjZlnWARo+wuAAEn+O4QG6m1DLYdn8eREwgRO8VezFwHlS+l0CULZzAtxnixQOWe4G4aPSMn7mmjrP+CAs/T3jfQH3Kw5+fKX5HoFgQEH8sLikGhc9hTgbBeY31ZeqGwvGxhJRu/7yNxGLzxnlxgcbWdC+BEPom6caxmcbJQDboul1sQEp2HC2o3nwMh+oQnrVi9yD5P9GZJLJAmSSyQJkkskCZJLJAmQQAfgHwa33lFjFvGQAAAABJRU5ErkJggg==" InformativeScreenshot="d254440bae99876be75207f2dc19210a.png" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='HwndWrapper*' title='Collaborate using the cloud' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
-                                          </uix:NClick.Target>
-                                        </uix:NClick>
-                                      </Sequence>
-                                    </ActivityAction>
-                                  </ui:ForEach.Body>
-                                </ui:ForEach>
+                                <uix:NClick ClickType="Single" DisplayName="Click 'Run Alt+u'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_27" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f18db41a-3145-4404-afbe-6f1175e3fb5c" Version="V1">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable DesignTimeRectangle="81, 617, 78, 28" ElementType="Button" FriendlyName="'Run Alt+u'" FullSelectorArgument="&lt;ctrl name='Run Alt+u' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Run Alt+u' role='push button' automationid='' check:text='Run Alt+u' /&gt;" Guid="78925ba6-c236-4fcb-96fe-60b54c18f92b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFIAAAAgCAYAAACBxi9RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJvSURBVGhD7ZnbbtpAEED7T/6Vwodw6W8A7hcU2jiFAOlLI6E0UR9AIX1PuIabuZQ7NOEhFZ0ytiFr6kG4olseZqQjeWfGlvawawvtK+A4SLDIA4VNZCbzBaIxDU4/nsHniwzjALqJvdfg8vLasmbGRiRKjMeTsFwuYbFYwHz+A2azOSOATtDNcvnLECrK3IiMxk4MiXjDdDpjdoCO0BXu3nVsRKLhx8cnmEymzB6gK+30zLIniMT9j7bH4wmzB+jqYuVsHTaRo9GYcQEpcjgcMS4gRQ4GQ8YFpMh+f8C4gBTZ6/UZF5Aiu93vEvkEQUUBxcYbOHfsPU5IkZ1OTyIo0gvq7UvuVvUaMtO2vuOFFNludyVyDgEUmRdy+bfgVYKQdqyLY+taDW5Ws1f9ZvXJgxSp6x2JpA0ZkfxLLhVYSQmkibo4xmuhN6+CZ/UDpKznyIIU2WrpEkmZMgQCye26ByI3TuNdNXmQIpvNlkSS4Dcmv75WwBO5IepO/VRNHqTIRqMpEXPy4Zw1zkVW21MBf4Ko28a7avIgRdbrDYkkwIeTzwq5hH+1xde5HIQ9CvgSZi0b9gi17XsdniUBUmStVpeIOflQ1p7PhkxhRj7u27w/X4fCQv/2vc7P+teQIqvVGuMCUmSl8nA0iF/zbZz6/wekyHK5yriAFFkqVRgX7HhHPkCxWGb2gHxH4uEX/n8sFErMHqArTUtY9gSReOj9/PzTWLL390VmB+gIXb2LfrDsCSLxsBtXJTboettovrsrMALoBN2goxMtDldXXy17gkgMlImH3nhei/uf+RPczrgSRYkYNpEcfx8s8iAB8Bv1gSyH9Bzg5wAAAABJRU5ErkJggg==" InformativeScreenshot="94e124517ed86530d1a3401cd0bdf964.png" ScopeSelectorArgument="&lt;wnd app='lmu.exe' cls='Qt5QWindowIcon' title='Autodesk Licensing' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                      <uix:TargetAnchorable.PointOffset>
+                                        <uix:PointOffset X="-1" Y="-1" />
+                                      </uix:TargetAnchorable.PointOffset>
+                                    </uix:TargetAnchorable>
+                                  </uix:NClick.Target>
+                                </uix:NClick>
                               </Sequence>
                             </ActivityAction>
                           </uix:NApplicationCard.Body>
                           <uix:NApplicationCard.TargetApp>
-                            <uix:TargetApp Area="2686, 343, 400, 590" FilePath="C:\Program Files\Autodesk\Revit 2020\revit.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAZvSURBVFhH3Zf7N1VpGMfnn5lpVc5JFDqFbkqNaiUcNI10QZHLcSi3orTSTRfFSE1ZkRBCGNeoOaQyCSVyvyXhuDWq+eE7z/setnO0T2p+aa354buOve21v5/3eZ73ed79w7vRj/ie4gAtfe/xqmeCq6n3PZpJr+ley5v3aCW19ZPe/o12UucA0yS63k2im9Qz+AE9Qx/QS3ozrFG/+gPejnzEwJTejX7C4NgnDJGGSepx+iUJAC+7x1HbNobn7WOo6xhDfec4Gkgvu8bR2D0NNoFmgmJgGigNUAeHmgIanOQgfVMw/eqPAgiD4ABkrJ74RxfgBRk9axv9DILdj77bBJcL1XA6Uwn7Uyoux9OV2B3zGMrrtbhV0YX69tFvhtAFILO/WkdFIbaeqoSxsmhOmQQUccj79QNfBcEkANR3jqGmZVQUYutJlajhl+QZX4OuOSBYTQgAdQTw5PWIKMQ2CvdsA9nhclpxHox9MmFyIBXLFJkwDSzUecbzt6dzRmIGgFb6mADEIORndQFkYfdh6BoHqeVeLDKRk+whlf0CI/tjsDhwDUb+f8DYv5B+i1D1amgOiCkAttLq5hFRCKfohzoAywhg4ebDMLNRwnp7BGQ/+xGEAySr98PY3Blm+xNhpCjgIB6xT/UWpg4AW+mjJrUohOOpUiwNLBYATIPKYGh7TGeLRsbmUUT2wHBjAMx2nsNi33sw8svHqpASvbuDRUEAeEYAVa/UohD2R7KxgnIuAASXYYn8JN+i0xAFqmaeEiO7SKxwi4XhgWws9smFibJAb59gzUoLYBSVjWpRCPvQLMiCZgps6cESLNkVL/QJBhESnUVpiYCxyyWY+yRjkWcGQdyFqX++3mbVT1EQAGoo1KrGYVEIu5AMyOilSwJm0rBYUQjfhBqcSK6BY3gOJC5XYeSeDGP3m1geSNceqRxiw+FivR2TpUEAeEqhfvhyWBTCLjgdkk3BsIioEABYhU//bUwFZ+ybS1syG8sC82CmzIaBWzKk+9IQl9est2336QDQSh+8GBaFkAelQWLtj+Ve16kAS2eMtbQ0sAgW4VQn3mlYsPMaFu65CQtlDp8dbNCJQbA0CAAs1xUNQ6IQTkEpkFh5Q7JegZUheXz1bFdYhFfAnCQLLYGJ4g5+dIjGPOdLmP9rAgwIQNU4KAwwMQg2RQUAlutyAhCDcAxMoj2+j0NIaZvJEx5h68UyWEVkwzLoDiS7r3HjnxwvYN72WMynenA+UfLZFJ0NwepAAKhuVtMQGRKFcAxI5FtMssYTUmsF5DG52BSRgHWHzmOl93Gs8j9PIClkHE+rv4IFrtdhe7RIdJRrQ+gCUK7L6gY5BAfQgnBUXofUYhePgqn8COzPpsIm/ArWHTzHAWRuoZDtDcGasBQY7E7k4Ze436b6Gf4iBCtEAaCTLlheOui0w6R96nENogiYu0K6ygOWHhdhezIJNhSB0MT7OJNeBXOv4zDfFw5Lr2OUlkxuLt2XDnlUuU6zmg3BPAQAZqQXIJgBUAQIYLVPAk3HFGyO/B2Z1P16hyZxIasaa/zPwCogGhvD4mAVmY9FXpkw9M7GjZJ2ftpimg3RSX5fBbDnCK2I+rxkzX6sPZQEh3PpsI26idzqNg7A5H7xHk/LFgKzO5sOq+PFfB4soR7R0jdOFa95/2synoZghfhFAPYAy5Vr2G2+esnaA7A+mgGnmLtwiE5DuqqNP8sA2PO2UWmwp/tOMVlwuVoM69MVfCJuinzA+/7bqYMqa0BsccxvTgB2KnYJS+XmkvV+2HI6HzviC+B8OQe3HrShlsa4BuIDSut66f49Mi/CrsRyuKfSdr1czRtVVEajADB9FtAZx/pSwCLgcpg6ITUhgw0BcIwrh+uNMm6SpurgM4Q1MSZ2pojIeIa9yX/CI+0xvLJq4Zv3EjuSGmAWXEpNbfDbAZhcwu/AYONBGNgEY1dSNdxSKrEn6SEKn7/huW2lb4YXXRN8dKuoce29+QTeOfXwK2iCsqQNhyp64JXfCZszVTqnoa8CYPdzVK2w9rwK6bZIeGY9h1vSUxzNbqD/afKvkWbGs+byuHUEAZmN8M5sgk9uK/zIXFHYDUVRD84Wd347wLTYdQeZMhO2cqbZAKzAmNio1Ry9ZvSfakAbgH2GMfP/JwB7yfTLZww0H5zT0jaYbcTNmLQMuenIjAa4dM0FgO+nj/gXQss6CKEFuc8AAAAASUVORK5CYII=" InformativeScreenshot="e9ae475345d19912547b74b78a456537.png" Selector="&lt;wnd app='revit.exe' cls='HwndWrapper*' title='Collaborate using the cloud' /&gt;" />
+                            <uix:TargetApp Area="571, 143, 778, 716" FilePath="C:\Program Files (x86)\Common Files\Autodesk Shared\Adlm\R17\lmu.exe" IconBase64="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" InformativeScreenshot="9106a4aa5c3403033a939f225919b82a.png" Selector="&lt;wnd app='lmu.exe' cls='Qt5QWindowIcon' title='Autodesk Licensing'/&gt;" />
                           </uix:NApplicationCard.TargetApp>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -548,100 +259,402 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NApplicationCard>
-                      </Sequence>
+                      </Parallel>
+                      <Delay DisplayName="Delay 10 Sec" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Handle Pop Up" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_16" OpenMode="Never" ScopeGuid="441cb61d-9f9e-409b-8516-20be5e5ed5da" Version="V1">
+                        <uix:NApplicationCard.Body>
+                          <ActivityAction x:TypeArguments="x:Object">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,207" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NClick_28" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="441cb61d-9f9e-409b-8516-20be5e5ed5da" Version="V1">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable DesignTimeRectangle="349, 196, 87, 29" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='Default Family Template File Invalid' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Close' cls='Button' title='&amp;amp;Close' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Default Family Template File Invalid' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Close' cls='Button' title='&amp;amp;Close' check:text='unchecked' /&gt;" Guid="abab60c5-67be-448e-9173-e6eab7c4ad2b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFsAAAAhCAYAAAC2j9c+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGxSURBVGhD7ZbNccQgDEbdgmuhGyrJjVZohSpydgfuQDF/G4Qh0RrD4B0d3mAGy8k8PrQs+74DMwaWPRCWPRAke/n6Zm4G+UWTwstMG8gvmoQXtm2DdV15bBjJsmMBcw3rjyy79AHmPciyOdltcLIHQ5bNyW5jumQbJWBZlgQJOqxpuYBQ5lTzJMiy+ybbgBJYrkNLkNo/P132NMl2iRYKTGEtwsm+BQ3yaBkxwTVKsk9tR2q0bk/G77oAZWq1eK0HcyTbCcnaR4FctpeV1oVWFIUbBSKVqNXr+XSSiP9DK2TZ3ZJ9SbY9DYU0OsHhW+kzolTrN+q/09XCc5NdrUlFxh/dTKKrje0D01O2hSy7W7Lz417hfdkB930rM7xP3Ny7mSPZea+tgGTXNqjaOvzfcPXEze0BWXa3ZDv8jeR0/TtSWLtn2zlOaCLUzpPavCcXa+XfV89WJkl2JCQ86aGp/Fy2Jb/6ofVX+yisHXjh9fUekGX3TfbnM0Wy03TVKNU9EbJsTnYbk/Xsz4csm5PdxtvJjsJ5vDaSZTP3gfyiSeFlpg3kN50wfWHZA2HZw9jhB7pczI9qyfzxAAAAAElFTkSuQmCC" InformativeScreenshot="0ace00b6db129469619a81a4047d15de.png" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='#32770' title='Default Family Template File Invalid' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                </uix:NClick.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NClick>
+                              <Delay DisplayName="Delay 5 Sec" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                            </Sequence>
+                          </ActivityAction>
+                        </uix:NApplicationCard.Body>
+                        <uix:NApplicationCard.TargetApp>
+                          <uix:TargetApp Area="722, 332, 458, 290" FilePath="C:\Program Files\Autodesk\Revit 2020\revit.exe" IconBase64="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" InformativeScreenshot="14616ae001d0c9312ddc94487f026e07.png" Selector="&lt;wnd app='revit.exe' cls='#32770' title='Default Family Template File Invalid'/&gt;" />
+                        </uix:NApplicationCard.TargetApp>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NApplicationCard>
+                      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Create Project | Collaborate | Cloud Migration" sap:VirtualizedContainerService.HintSize="434,826" sap2010:WorkflowViewState.IdRef="NApplicationCard_17" OpenMode="Never" ScopeGuid="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Version="V1">
+                        <uix:NApplicationCard.Body>
+                          <ActivityAction x:TypeArguments="x:Object">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Second Sequence" sap:VirtualizedContainerService.HintSize="284,534" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,440" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Sequence DisplayName="Create Project | Browse " sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Shortcuts="[d(hk)][d(ctrl)]n[u(ctrl)][u(hk)]">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NKeyboardShortcuts>
+                                  <uix:NClick ClickType="Single" DisplayName="Click '&amp;Browse...'" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="NClick_31" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Version="V1">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="290, 65, 90, 24" ElementType="Button" FriendlyName="'&amp;Browse...'" FullSelectorArgument="&lt;wnd ctrlid='2238' title='&amp;amp;Browse...' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='2238' title='&amp;amp;Browse...' check:text='&amp;amp;Browse...' /&gt;" Guid="cad77fce-397d-4c7e-928d-f9cd82a71c69" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAAcCAYAAADoQggJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFvSURBVGhD7ZXblcQgCEDtyW5oxlZsIEVYih2kA1YSMaiZnZ+J7Nnh454zIHnMBY3b9x2N9Zh4JUy8Ep34bduMB5GuJ/E5Z+MBTLwSJl4JE6+EiVfCxCuxTnwK6J1DJ4B4U/clrBXvA6ZX8ZehJz4COogtH4B2AWDk2rYzRI6vP9ZrPicM/vydgm+7yXW1fC+PIdE1+qwV3wQICTV/HTsRQcSHTGrQkb8EA0CtKXmS3DUjYyzrUVzT3kE2XxG9ief4VV7GVV6Es1mHVMrzjmmNoYYOolujGbGuiJ54nsYxfxdXWcekxzrhfMSUI6v/SIsGTM/8O+iJpzOe4knOKW4+akpcasF79CHVtSK9TD8fWVDz57lPu6O/Vwc9d9odv8QfZq34tt3Flqf8OJVdrfzzJFJ8ILl5be26Pzdnei7Xj2LfxR9mnXijY6n4NnUDd7X/HZt4JUy8EiZeCROvxFvxxnNI1514Yx0mXgkTr8KOP2jfQ4bHTSn6AAAAAElFTkSuQmCC" InformativeScreenshot="c30dd69dae6e3d65a87a6aa5fe979887.png" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='#32770' title='New Project' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                    </uix:NClick.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NClick>
+                                  <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Source Path Selection" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_19" ScopeGuid="e31d8c5a-0273-476b-82d9-3aa5f395ca31" Version="V1">
+                                    <uix:NApplicationCard.Body>
+                                      <ActivityAction x:TypeArguments="x:Object">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Travel To Select Source Path Do" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="[source_path_file]" Version="V1">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </uix:NTypeInto>
+                                          <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </uix:NKeyboardShortcuts>
+                                          <uix:NClick ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="NClick_36" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Version="V1">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable DesignTimeRectangle="109, 176, 90, 24" ElementType="Button" FriendlyName="'OK'" FullSelectorArgument="&lt;wnd ctrlid='1' title='OK' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='OK' check:text='OK' /&gt;" Guid="5f2913d2-ddd2-408f-8960-d33f60ffea7c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAAcCAYAAADoQggJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADySURBVGhD7dbBDYQgEIVheqIbmqEVGrAISqEDOpgVNuiwmuzuQWfGvMMfjeDlwyCu1kro/gAvFOCFmuCXZUEXxq0P8KUUdEGAFwrwQgFeKMALBXihTMLn6Mk5t+Vjfo/lSN5HymNuCn08pP1dLZmD7+gctyQKA5/Dt3vnKeb9XU0Zg2/IJ5gDnF8Vo7dswfMveqotSKDUx7169Nbz4Bt6XPf203l6sgX/61azPuv/gpDmeYoyBv/Hz7Vkip6deJRlDr71eZzcjouHrYgtyvZMRybhnxDghQK8UIAXCvBCAV6or/Dourj1BI/uC/BCAV6kSi+cyu4CODqT7wAAAABJRU5ErkJggg==" InformativeScreenshot="a93cb5ac89777e709be3175720a99d09.png" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='#32770' title='New Project' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                            </uix:NClick.Target>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </uix:NClick>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </uix:NApplicationCard.Body>
+                                    <uix:NApplicationCard.TargetApp>
+                                      <uix:TargetApp Area="555, 262, 790, 494" FilePath="C:\Program Files\Autodesk\Revit 2020\revit.exe" IconBase64="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" InformativeScreenshot="a52fd91c90797b90d8edefb76d059872.png" Selector="&lt;wnd app='revit.exe' cls='#32770' title='Choose Template' /&gt;" />
+                                    </uix:NApplicationCard.TargetApp>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NApplicationCard>
+                                </Sequence>
+                                <Delay DisplayName="Delay 5 Sec" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                                <Sequence DisplayName="Collaborate Workflow" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NClick ClickType="Single" DisplayName="Click 'Collaborate'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_37" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Version="V1">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="600, 36, 61, 15" ElementType="Text" FriendlyName="'Collaborate'" FullSelectorArgument="&lt;ctrl automationid='Collaborate' /&gt;&lt;ctrl automationid='mContent' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='Collaborate' /&gt;&lt;ctrl automationid='mContent' role='text' check:text='Collaborate' /&gt;" Guid="ded70457-8aa8-47a5-af2e-e7ea6cb85ad1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAATCAYAAADPsWC5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAExSURBVFhH7ZTRDYMwDEQ7EouwCGswBmOwRnaiuUqHLsYB81NVxR9P2MQ5myPwKqVsTydNqKQJlTShkiZUXBPGcdyGYfiA2KuxoHZd10PcI1LzLRoTMBSGW5aluad5j18z4Y5+YwLeeuSBPf7CBGzARl20sIaoYdpU42ma9nrEWo/9XJvneV+76kNN5J4+c71nNakHGhOuvn9s5kAU5cP2YsXWsJ+nddZHDVNsHWObQ1s1wifBW4fLHLY3ANaRE68GUOtOHxDRp6bCEwLC/4Q7wzG2e6Bva3TtrglRfU9TaUygq2oEBHQAxlZYmzJG7dmR55H0tCJ9rvQZM+99Ro0JgGKETbw128QbAPuR4wq0Bm8YV8CHBtE+oKdPbR57q8n74GDCE0kTKmlCJU2opAmlbG/46i/abEJ4+QAAAABJRU5ErkJggg==" InformativeScreenshot="737efb14d9b7750cc0349ffec189b63e.png" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='HwndWrapper*' title='Autodesk Revit 2020.2 - UNREGISTERED VERSION - [Project1 - Floor*' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="590, 34, 81, 20" ElementType="Button" FriendlyName="'Collaborate'" FullSelectorArgument="&lt;ctrl automationid='Collaborate' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='Collaborate' role='push button' check:text='Collaborate' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFUAAAAYCAYAAACLM7HoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFeSURBVGhD7ZTRDYMwDEQ7EouwCGswBmOwBiuwAitQXaVDrutAksZSPvzxhJOYi30kvLZtO4O2hKkOhKkOhKkOhKkOhKkOhKkO/GXqOI7nMAwfEFs5GuSu6/oTp8jJ6Y0qU9Ekml2W5WtOjlP0ZqqHfpWpOJU5BlqEqQYoAIVYa4Q5RH4A2YSMp2m68hHLfLzPtXmer7WnfaiJsaXPsZzTmtQrocrUp/8nimGDLJLmpWKJzuF+ltbdPvIDSHQeYz2GdkrjjuYn1VrHKWDzqYawjjGxcgC1SvYBOfrUlPAEl9D8n1rSLGP9DvR1jlwrNTVX39KsocpUfnVpLAqSDTHWhcomGCP37orzClpaOfs86TPmuObKS6pMBSyOsGhrTRdtNYT3McYTyBycQDwBTQS5+4CUPrV5zbUm50uoNjVIE6Y6EKY6EKY6EKY6EKY68DqO4wza0r2p+76b8/1ynG8cLxpXz+TTxQAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <uix:NClick ClickType="Single" DisplayName="Click 'Collaborate'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_38" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Version="V1">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="150, 57, 67, 72" ElementType="Button" FriendlyName="'Collaborate'" FullSelectorArgument="&lt;ctrl automationid='ID_COLLABORATE' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='ID_COLLABORATE' role='push button' check:text='Collaborate' /&gt;" Guid="994ca492-04ff-45d6-b826-655b31f3c095" ImageBase64="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" InformativeScreenshot="1335ba57b0438518e1c323cc27c1177e.png" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='HwndWrapper*' title='Autodesk Revit 2020.2 - UNREGISTERED VERSION - [Project1 - Floor*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_39" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Version="V1">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="18, 134, 330, 41" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd aaname='Collaborate - Revit Model Not Saved' cls='DirectUIHWND' /&gt;&lt;wnd cls='Button' title='Save the model and continue' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Collaborate - Revit Model Not Saved' cls='DirectUIHWND' /&gt;&lt;wnd cls='Button' title='Save the model and continue' check:text='unchecked' /&gt;" Guid="9b436880-a6be-4f3f-bdae-218ede377d26" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAU4AAAAtCAYAAADBRIIpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUASURBVHhe7Zq7bt1GEIb1BnqU9G7yKOncpnWXR4hSpkorpHFhQE0ApUkZII0DF0IMuJAR+IIEAgy7MMDsldwd7mVI+vCcSN8HLCiSu7OzuzP/mXPsswEAABaBcAIALGQUzl//+kCj0Wi0RotkwgkAAGUQTgCAhaiE8/z8nCtXrly5BrrCmXYGAABlxQkA8NCh4gQA2AAVJwCAAipOAIANUHECACig4gQA2AAVJwCAAipOAIANUHECACig4gQA2MDBK84/Xn8Mf91fri5fDI+uP4W7/yc31y+Hs4t3w02472HXfHZ5F+72Y6mfe+H24wT9gi/HbhXn97+9H86evBh++v3f8GQFz2+djawdIWFbIJz7gXDCKXDQivOfj5+Hr34wgb5SPF0wPrkdrsK95254fEThLCUuwrkfpyCcpyrecFh2/Y1zvXgagTRjHj8PtycCwulBOBHOh8xBK87IOvH0wtkVpDfvhkem3/g1PqlQa8ntnieB7xJhHP9yuHgTXmR8Gi4uYp/Qgo0onLkdWSlr5/FE37MxYS3L5pnGpTj78b1Zx5UdI8Sg5W9tb0ca52Ip7llBjDR+zpA/7yT9e3vT9qsdA6mt/vq8LVkYuP7Cp9zndtzA4di14oysEs+YAI1Eubm+rSe0G1/4qm9sxoB1/VP7xTETLoiFP86GsTmJvJ9DJtKSeao2s2chkeU8mV1FnyhyiX89f917keApzXMxeB8Ue9bxU+JFJhUXs/5L339mr7o3bb+qMbDIjk44nZ0FcQP7sKri/PbZ38PXP75a3KJw2qavPENwu3GKgMkCy4+dgtdg38dAdIkoP8HLAR3RJI0l67dinlnCGHwy5nswn6dgM5vfJ3AxYRf4W1pzE4Xw5nur8HNGeYxDtTcav8o+yHF9O+Xzd33iOMU5wH5srjitCEYBXNus+C7FBaMZWwy2zP6UoDLIrY1RSF0yp+OmloltQi1pZv1ToVgxTz/xAukHgRCniURQKn0y2wp/S/5JWuei27OOn5Lq+g3Vd7nYdv0y1GJACmfbjkI4Xf90/6ZWixvYh1UV51pslWkP/ZufX4cny/HJGIPPB30WxDJB0k9t93fyrppMdWpJs0YEWshEtBRFw9qOz6rzrBHOtr8l/yb657J2z4p7EGn5XX136sJZWQ/szlF+4/wSoulIg6kQWC7wxLMYxFlQWmpf3xrUkqaZJCvmkYloKc3t5onPavPMPjzk178wX89OQsm/EcW56Pas46ek5XftnZin65ehFgNrhFP2yewozgGOwy4V5zrRNJXALEF8sFUDK9zLpPXicmvsVRIx62/mCP+YUKQgCppkWzpPlkCBrnAaivOkexbvUzvO1/xZz9+SfyOKc7HjNcLS81PS8ru/Nxq/DPLeIPdDY0d+mIzrE3ZmPrfiEw7GrhXn+kozfN0TTQajD77w3iZUIaiLSZjgg3Nqs4DPCLbifOaJKtkMS+ZxfYUwaYTTku1JcZ5kDbaZeUq2W/6W/EvpnYtuz3R+Slrr7+3NYr+CL3I/Nq1P7KuzHfuYNrMLu3PQivPpn3fuoDd/PQcAODK7VZz2/25+98vbcAcAcD84aMUJAHBf2PU3TgCA+wYVJwCAAipOAIANUHECACig4gQA2AAVJwCAAipOAIANqCrOKJ5cuXLl+tCvFpVwAgDABMIJALCQqnDSaDQard4io3ACAIAOhBMAYBHD8B/Io+4cbB/CigAAAABJRU5ErkJggg==" InformativeScreenshot="ce0893d7692813bcc6203cb1547780b8.png" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='#32770' title='Collaborate - Revit Model Not Saved' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'File &amp;name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Text="[destination_local_folder_path]" Version="V1">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="214, 401, 429, 15" ElementType="InputBox" FriendlyName="'Project2'" FullSelectorArgument="&lt;wnd ctrlid='13006' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='13006' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="550b3640-a17a-43e0-a3d9-717e3438951d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAbEAAAATCAYAAAAeczPgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFlSURBVHhe7drRcYMgAIBh53Ig53Eal8kwVBGrKDY2TXJH8313PoCG5O0/iE0AgEqJGADVEjEAqiViAFRLxACo1jFitz60TROa76sLQ7p12bRG24dbGl62/9zut7T9r1cE4B8rR2wbkqELzSNBekThu7vvgg6ha9qgYwAs7kcsxmPcjaX5vtvszrKdUpqbojeNlzWyZ7YRmtZd5psxVrfQt+v4uOua7osYAKu7Ebv17RykFKN8Z7SO43PrIK2RAjjPbubnYK1rJbvvzvx0D4CPdP8/sSUc+4iUxtsd2nRvv1a81l3dIUhn8zGGdmEA5C4cJyb7+dK4FLEray2K8wIGQNnjEYtxuXKcWDg2HO+cHifujx8FDIATf4jYKEZmc0yYprNns2fG62R+CdoQXxyZX+yIYdw8s8wDwOQYsWd452v5AHysJ0dsPj7MX6UHgNd4zU4MAN5AxACologBUC0RA6BSIXwB1jjgY4lS5dgAAAAASUVORK5CYII=" InformativeScreenshot="39793feca423027533e74095e488e6f8.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="137, 402, 69, 13" ElementType="Text" FriendlyName="'File &amp;name'" FullSelectorArgument="&lt;wnd ctrlid='13008' title='File &amp;amp;name:' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='13008' title='File &amp;amp;name:' check:text='File &amp;amp;name:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEkAAAARCAYAAACRroFGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD/SURBVFhH7ZTRDcMgDESZinm8DcOwC7OwgRuITC+Ok/DTUlX+eJJz2IacDKHWys49btIEbtIEbtIEa0wqiWNMXKy1H+QzJjUTQuBwgDiLOW7SxpMJbtLGlQnWJLV4TFvkVOyaRO+ppLyvlRSHNmp7PjFFyS2cRgw9dd3Qz2dYfN0yU9OxTsxTvcYPZuKgc0SnfPzRpmH8tCfWyvrG2knqhzLMtGqsb12Pva1cWceajtpTsd4kKw/ROVirr4ruacWoTbL4TWqjD1fJQvc69dj1/j5p3Yxv9mw5P3fdRMPR13W6F3xneMwjkd37Krb27Pq3TPoz3KQJ3KQJ3KRHKr8AycItt6zG7isAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NTypeInto.Target>
+                                  </uix:NTypeInto>
+                                  <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1" />
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'File &amp;name'" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Text="[local_name_for_filesave]" Version="V1">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="214, 401, 429, 15" ElementType="InputBox" FriendlyName="'C:\Users\KishanT\OneDri…'" FullSelectorArgument="&lt;wnd ctrlid='13006' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='13006' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="699b081a-6a02-4f90-a681-3af36d2e108c" ImageBase64="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" InformativeScreenshot="d3d5e0ddc7775381561747977f16cbbe.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                            <uix:Target DesignTimeRectangle="137, 402, 69, 13" ElementType="Text" FriendlyName="'File &amp;name'" FullSelectorArgument="&lt;wnd ctrlid='13008' title='File &amp;amp;name:' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='13008' title='File &amp;amp;name:' check:text='File &amp;amp;name:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEkAAAARCAYAAACRroFGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD/SURBVFhH7ZTRDcMgDESZinm8DcOwC7OwgRuITC+Ok/DTUlX+eJJz2IacDKHWys49btIEbtIEbtIEa0wqiWNMXKy1H+QzJjUTQuBwgDiLOW7SxpMJbtLGlQnWJLV4TFvkVOyaRO+ppLyvlRSHNmp7PjFFyS2cRgw9dd3Qz2dYfN0yU9OxTsxTvcYPZuKgc0SnfPzRpmH8tCfWyvrG2knqhzLMtGqsb12Pva1cWceajtpTsd4kKw/ROVirr4ruacWoTbL4TWqjD1fJQvc69dj1/j5p3Yxv9mw5P3fdRMPR13W6F3xneMwjkd37Krb27Pq3TPoz3KQJ3KQJ3KRHKr8AycItt6zG7isAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NTypeInto.Target>
+                                  </uix:NTypeInto>
+                                  <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_5" Shortcuts="[d(hk)][k(back)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V1" />
+                                  <uix:NClick ClickType="Single" DisplayName="Click 'In BIM'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_46" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Version="V1">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="19, 255, 362, 15" ElementType="RadioButton" FriendlyName="'In BIM'" FullSelectorArgument="&lt;ctrl automationid='CollaborateUsingA360Radio' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='CollaborateUsingA360Radio' role='radio button' check:fulltext='In BIM 360 Document Management&amp;#xD;&amp;#xA;In BIM 360 _Document Management' /&gt;" Guid="7b55b53f-e823-4b23-87e4-c0e390f9e3be" ImageBase64="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" InformativeScreenshot="0e3b87f1d5657d8fa8cca1b424f30937.png" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='HwndWrapper*' title='Collaborate' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <uix:NClick ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_47" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6ebc7ef7-0931-4b41-81b4-cee7b9ef4610" Version="V1">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="224, 356, 75, 23" ElementType="Button" FriendlyName="'OK'" FullSelectorArgument="&lt;ctrl automationid='OKButton' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='OKButton' role='push button' check:text='OK' /&gt;" Guid="4cdfb62d-5206-440b-b9b3-fbdd545d887e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEoSURBVGhD7dbBbYMwFMZxew3EFBFiiA6BGKHHXit5gqzgPcIAcO/F7MAGr7XdEidx1JAnmRfpO/wlgjn99GxHLctC6LmAx2jFUx9f6MGyePM8o38CHiPgMQIeI+AxAh4jcXhutNRVmpRSIV33ZCe3ro+2o0NvaXLxnf9d6ZbMcP6mVKLwIlxNvZ3O706GmgQnxQtrV7glE4Pn3Ei2q6g1w81aCrY+B+h9Ju4vQXgnMk0eI0xYa2hY8T7pvbmc0D2Sg+cn6ZDfgulaPOM06V/M629L9hqT5/He0sk70vFni9fJxbFHgvA2nnkBW2e/L5UYPF+8WS/PsrhN79y2mdu5ZKLwfBFk6/+8fQDF4b1SwGMEPEbAYwQ8RsBjdBcPPdYNHtoe8J5uoW8kJN8DaiSpSwAAAABJRU5ErkJggg==" InformativeScreenshot="e7eb273d2e2d09c05b1b778a4c255f51.png" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='HwndWrapper*' title='Collaborate' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="253, 359, 17, 16" ElementType="Text" FriendlyName="'OK'" FullSelectorArgument="&lt;ctrl automationid='OKButton' /&gt;&lt;ctrl name='OK' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='OKButton' /&gt;&lt;ctrl name='OK' role='text' automationid='' check:text='OK' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAAUCAYAAABiS3YzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADcSURBVDhP7ZLRDYMgEIZhDeMUxjhEhzCO0BWaMIErsIcOoCPALH970OKd0qS1pk8+fAly53fHgfLe42hOaT7wC/+RusmiLTSUUgFddrCzS/HJtqg6i9nFPfoudAMzLjlCGoUlOjsve4NBzX7i0hBbFSWS1LkJti3QmFEkEFyU1qEB2eELJh1g6nxS6KgxGJP0hmstT8RZpFS52h5lHYsz1NDPIutc4rNOSXrhnfboH6Mq2YVx9s80NKGz+UlKxJuWs4rHfXP7mddCCCkRE799p1K8kR7BKc0H9uNxB46BehxAavd1AAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                </Sequence>
+                                <Sequence DisplayName="Cloud Path Finder Sequence" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Collaborate using the cloud" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_20" OpenMode="Never" ScopeGuid="c093ba49-8d83-4b62-ae18-7340559d93fe" Version="V1">
+                                    <uix:NApplicationCard.Body>
+                                      <ActivityAction x:TypeArguments="x:Object">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,146" sap2010:WorkflowViewState.IdRef="Sequence_75">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each Folder In BIM 360" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ForEach`1_8" Values="[cloud_path_break]">
+                                            <ui:ForEach.Body>
+                                              <ActivityAction x:TypeArguments="x:Object">
+                                                <ActivityAction.Argument>
+                                                  <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+                                                </ActivityAction.Argument>
+                                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,251" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <uix:NClick ClickType="Double" DisplayName="Click 'DPR Construction'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_66" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c093ba49-8d83-4b62-ae18-7340559d93fe" Version="V1">
+                                                    <uix:NClick.Target>
+                                                      <uix:TargetAnchorable DesignTimeRectangle="40, 279, 144, 20" ElementType="Text" FriendlyName="'DPR Construction'" FullSelectorArgument="&lt;ctrl name='Autodesk.Revit.UI.Collaborate.ViewModels.ForgeDmHub' role='list item' /&gt;&lt;ctrl name='DPR-Sandbox' role='text' /&gt;" FuzzySelectorArgument="[String.Format(&quot;&lt;ctrl name='Autodesk.Revit.UI.Collaborate.ViewModels.ForgeDmHub' role='list item' /&gt;&lt;ctrl name='{0}' role='text' automationid='' check:text='{0}' /&gt;&quot;, item)]" Guid="e07f332b-8567-4f74-88be-ce7fbceebd32" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJAAAAAUCAYAAABiZ7R2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANHSURBVGhD7ZhNrtMwEIDjRdVbcAWWVTY9TyULqVdgwwX6ItQTIE5QZVFYILFAYoMQr0qXcAc2rYeM7UnGjp2Eug8E8idViu3Ef/NlnPcKyGQSyAJlksgCZZLIAmWSyAJlksgCZZIo3r5/1BdKNVCVAoqi6H6irKBRSrcjTVU67WXV2BaAWrrP8rYQvC8hJNRsnH8FVcvBHv0Jzvs1LITZbyE2cLioNn5n2K9L2J2u9q40jtslrHYnuE6srfjw5bu+MAKVUDWuMDy4WCYxSDhZmzYUiK6VqkEKty+CnhOytjXm/mpCuFvgc7oHqqmg/AvCEEaSBYjNAS52Dkod4XWFgb6vQHPpjrCQQAiXhl8jvOwHKxY8/dYyeZ6S/06g4xaWTB7OvTPQXCYF4ps2VyCTgcLH0lRQ9Xg2PeNv0GcrYLiNUrpZA45D95ljxjxftXM297hz9OfM56GzcGBe/sswHNP0ZfapzbL2E+HWYw+Plc3hYksuXCDKVN1cmHTYB9XTERWro7Ewy22XtBcrR9KbBTIb3t/vbB4LBCc2BmGC1rfzMUgSChj//vDFJoZSC2/+YYH4uBy+F7rMBMKxuEw4Jyrr624d5ggfe4lCTGWYWLsj1nkP63IHp2s/dqgOIYFIxpi4xcevP/TFqEBsI0gS/PFNoGBNbRAPqg8GxBeB5BgNuM1Kfr9DgcLP+2U/sxAxgcya+74Q3p8vuF9GlPoJn1897/b22ctPtqVnbgbSZTzuWMY0MphM4n9D+XVIJ1BEMKJ48+6bvogJhEGgxYYWTjjB8jaag32EgoPcKhCBc6A3ncq3CBRb51MKNAf919eMbyAtz6oPui8eycX/yvLrOoFGvruQgqpDAumAsA0bWzgPFoLlYBD0xrptGBjZlnWARo+wuAAEn+O4QG6m1DLYdn8eREwgRO8VezFwHlS+l0CULZzAtxnixQOWe4G4aPSMn7mmjrP+CAs/T3jfQH3Kw5+fKX5HoFgQEH8sLikGhc9hTgbBeY31ZeqGwvGxhJRu/7yNxGLzxnlxgcbWdC+BEPom6caxmcbJQDboul1sQEp2HC2o3nwMh+oQnrVi9yD5P9GZJLJAmSSyQJkkskCZJLJAmQQAfgHwa33lFjFvGQAAAABJRU5ErkJggg==" InformativeScreenshot="d254440bae99876be75207f2dc19210a.png" ScopeSelectorArgument="&lt;wnd app='revit.exe' cls='HwndWrapper*' title='Collaborate using the cloud' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                                                    </uix:NClick.Target>
+                                                  </uix:NClick>
+                                                </Sequence>
+                                              </ActivityAction>
+                                            </ui:ForEach.Body>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </ui:ForEach>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </uix:NApplicationCard.Body>
+                                    <uix:NApplicationCard.TargetApp>
+                                      <uix:TargetApp Area="2686, 343, 400, 590" FilePath="C:\Program Files\Autodesk\Revit 2020\revit.exe" IconBase64="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" InformativeScreenshot="e9ae475345d19912547b74b78a456537.png" Selector="&lt;wnd app='revit.exe' cls='HwndWrapper*' title='Collaborate using the cloud' /&gt;" />
+                                    </uix:NApplicationCard.TargetApp>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NApplicationCard>
+                                </Sequence>
+                              </Sequence>
+                            </Sequence>
+                          </ActivityAction>
+                        </uix:NApplicationCard.Body>
+                        <uix:NApplicationCard.TargetApp>
+                          <uix:TargetApp Area="0, 0, 1900, 1019" FilePath="C:\Program Files\Autodesk\Revit 2020\revit.exe" IconBase64="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" InformativeScreenshot="d483b588a849c8d8ae09f8e196b59388.png" Selector="&lt;wnd app='revit.exe' cls='HwndWrapper*' title='Autodesk Revit 2020.2 - UNREGISTERED VERSION - [Home]'/&gt;" />
+                        </uix:NApplicationCard.TargetApp>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NApplicationCard>
                     </Sequence>
-                  </ui:CommentOut.Body>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </ui:CommentOut>
-              </Sequence>
-            </Sequence>
-          </ActivityAction>
-        </uix:NApplicationCard.Body>
-        <uix:NApplicationCard.TargetApp>
-          <uix:TargetApp Area="0, 0, 1900, 1019" FilePath="C:\Program Files\Autodesk\Revit 2020\revit.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAZvSURBVFhH3Zf7N1VpGMfnn5lpVc5JFDqFbkqNaiUcNI10QZHLcSi3orTSTRfFSE1ZkRBCGNeoOaQyCSVyvyXhuDWq+eE7z/setnO0T2p+aa354buOve21v5/3eZ73ed79w7vRj/ie4gAtfe/xqmeCq6n3PZpJr+ley5v3aCW19ZPe/o12UucA0yS63k2im9Qz+AE9Qx/QS3ozrFG/+gPejnzEwJTejX7C4NgnDJGGSepx+iUJAC+7x1HbNobn7WOo6xhDfec4Gkgvu8bR2D0NNoFmgmJgGigNUAeHmgIanOQgfVMw/eqPAgiD4ABkrJ74RxfgBRk9axv9DILdj77bBJcL1XA6Uwn7Uyoux9OV2B3zGMrrtbhV0YX69tFvhtAFILO/WkdFIbaeqoSxsmhOmQQUccj79QNfBcEkANR3jqGmZVQUYutJlajhl+QZX4OuOSBYTQgAdQTw5PWIKMQ2CvdsA9nhclpxHox9MmFyIBXLFJkwDSzUecbzt6dzRmIGgFb6mADEIORndQFkYfdh6BoHqeVeLDKRk+whlf0CI/tjsDhwDUb+f8DYv5B+i1D1amgOiCkAttLq5hFRCKfohzoAywhg4ebDMLNRwnp7BGQ/+xGEAySr98PY3Blm+xNhpCjgIB6xT/UWpg4AW+mjJrUohOOpUiwNLBYATIPKYGh7TGeLRsbmUUT2wHBjAMx2nsNi33sw8svHqpASvbuDRUEAeEYAVa/UohD2R7KxgnIuAASXYYn8JN+i0xAFqmaeEiO7SKxwi4XhgWws9smFibJAb59gzUoLYBSVjWpRCPvQLMiCZgps6cESLNkVL/QJBhESnUVpiYCxyyWY+yRjkWcGQdyFqX++3mbVT1EQAGoo1KrGYVEIu5AMyOilSwJm0rBYUQjfhBqcSK6BY3gOJC5XYeSeDGP3m1geSNceqRxiw+FivR2TpUEAeEqhfvhyWBTCLjgdkk3BsIioEABYhU//bUwFZ+ybS1syG8sC82CmzIaBWzKk+9IQl9est2336QDQSh+8GBaFkAelQWLtj+Ve16kAS2eMtbQ0sAgW4VQn3mlYsPMaFu65CQtlDp8dbNCJQbA0CAAs1xUNQ6IQTkEpkFh5Q7JegZUheXz1bFdYhFfAnCQLLYGJ4g5+dIjGPOdLmP9rAgwIQNU4KAwwMQg2RQUAlutyAhCDcAxMoj2+j0NIaZvJEx5h68UyWEVkwzLoDiS7r3HjnxwvYN72WMynenA+UfLZFJ0NwepAAKhuVtMQGRKFcAxI5FtMssYTUmsF5DG52BSRgHWHzmOl93Gs8j9PIClkHE+rv4IFrtdhe7RIdJRrQ+gCUK7L6gY5BAfQgnBUXofUYhePgqn8COzPpsIm/ArWHTzHAWRuoZDtDcGasBQY7E7k4Ze436b6Gf4iBCtEAaCTLlheOui0w6R96nENogiYu0K6ygOWHhdhezIJNhSB0MT7OJNeBXOv4zDfFw5Lr2OUlkxuLt2XDnlUuU6zmg3BPAQAZqQXIJgBUAQIYLVPAk3HFGyO/B2Z1P16hyZxIasaa/zPwCogGhvD4mAVmY9FXpkw9M7GjZJ2ftpimg3RSX5fBbDnCK2I+rxkzX6sPZQEh3PpsI26idzqNg7A5H7xHk/LFgKzO5sOq+PFfB4soR7R0jdOFa95/2synoZghfhFAPYAy5Vr2G2+esnaA7A+mgGnmLtwiE5DuqqNP8sA2PO2UWmwp/tOMVlwuVoM69MVfCJuinzA+/7bqYMqa0BsccxvTgB2KnYJS+XmkvV+2HI6HzviC+B8OQe3HrShlsa4BuIDSut66f49Mi/CrsRyuKfSdr1czRtVVEajADB9FtAZx/pSwCLgcpg6ITUhgw0BcIwrh+uNMm6SpurgM4Q1MSZ2pojIeIa9yX/CI+0xvLJq4Zv3EjuSGmAWXEpNbfDbAZhcwu/AYONBGNgEY1dSNdxSKrEn6SEKn7/huW2lb4YXXRN8dKuoce29+QTeOfXwK2iCsqQNhyp64JXfCZszVTqnoa8CYPdzVK2w9rwK6bZIeGY9h1vSUxzNbqD/afKvkWbGs+byuHUEAZmN8M5sgk9uK/zIXFHYDUVRD84Wd347wLTYdQeZMhO2cqbZAKzAmNio1Ry9ZvSfakAbgH2GMfP/JwB7yfTLZww0H5zT0jaYbcTNmLQMuenIjAa4dM0FgO+nj/gXQss6CKEFuc8AAAAASUVORK5CYII=" InformativeScreenshot="d483b588a849c8d8ae09f8e196b59388.png" Selector="&lt;wnd app='revit.exe' cls='HwndWrapper*' title='Autodesk Revit 2020.2 - UNREGISTERED VERSION - [Home]'/&gt;" />
-        </uix:NApplicationCard.TargetApp>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </uix:NApplicationCard>
-    </Sequence>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="636,236" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEachRow>
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="CommentOut_10">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,158" sap2010:WorkflowViewState.IdRef="Sequence_92">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,160" sap2010:WorkflowViewState.IdRef="Sequence_100">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Excel Read Sequence" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_84">
+          <Sequence DisplayName="Image Exist For Collab Initiate" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_99">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[each_record_excel_config]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="434,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="C:\Users\KishanT\OneDrive - DPR Construction\Documents\Revit RPA UiPath Automation\Autodesk Revit Config.xlsx" />
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[each_record_excel_config]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,818" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
-              <ui:ForEachRow.Body>
-                <ActivityAction x:TypeArguments="sd:DataRow">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-                  </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,702" sap2010:WorkflowViewState.IdRef="Sequence_80">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_5">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:Int32">[length_n]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:Int32">[Split(CurrentRow.Item("Destination Local").ToString, "\").Length]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign DisplayName="Local File Name to Save" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_3">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[local_name_for_filesave]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[Split(CurrentRow.Item("Destination Local").ToString, "\")(length_n-1)]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign DisplayName="Find Index of Filename to Get Folder Path" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_7">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:Int32">[index_of_local_filename]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:Int32">[CurrentRow.Item("Destination Local").ToString.IndexOf(local_name_for_filesave)]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_6">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[destination_local_folder_path]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[CurrentRow.Item("Destination Local").ToString.Remove(index_of_local_filename)]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,85" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[destination_local_folder_path.ToString]" />
-                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,85" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[local_name_for_filesave]" />
-                  </Sequence>
-                </ActivityAction>
-              </ui:ForEachRow.Body>
-            </ui:ForEachRow>
+            <ui:ImageFound DisplayName="Image Exists 'revit.exe Default'" Found="[output_flag]" sap:VirtualizedContainerService.HintSize="797,106" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+              <ui:ImageFound.Image>
+                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+              </ui:ImageFound.Image>
+              <ui:ImageFound.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1151d1e-eeb9-4fb1-8e3a-72120ed07a9e" Selector="&lt;wnd app='revit.exe' cls='#32770' title='Default Family Template File Invalid' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:ImageFound.Target>
+            </ui:ImageFound>
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="797,427" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+              <ui:InterruptibleWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_95">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_4" />
+                  <ui:ImageFound DisplayName="Image Exists 'revit.exe Default'" Found="[output_flag]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ImageFound_2">
+                    <ui:ImageFound.Image>
+                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+                    </ui:ImageFound.Image>
+                    <ui:ImageFound.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1151d1e-eeb9-4fb1-8e3a-72120ed07a9e" Selector="&lt;wnd app='revit.exe' cls='#32770' title='Default Family Template File Invalid' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:ImageFound.Target>
+                  </ui:ImageFound>
+                </Sequence>
+              </ui:InterruptibleWhile.Body>
+              <ui:InterruptibleWhile.Condition>
+                <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="output_flag = False" />
+              </ui:InterruptibleWhile.Condition>
+            </ui:InterruptibleWhile>
+            <If Condition="[output_flag]" sap:VirtualizedContainerService.HintSize="797,337" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,177" sap2010:WorkflowViewState.IdRef="Sequence_96">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,85" sap2010:WorkflowViewState.IdRef="MessageBox_10" Text="[&quot;Found&quot;]" />
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,177" sap2010:WorkflowViewState.IdRef="Sequence_97">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,85" sap2010:WorkflowViewState.IdRef="MessageBox_11" Text="[&quot;Not Found&quot;]" />
+                </Sequence>
+              </If.Else>
+            </If>
           </Sequence>
         </Sequence>
       </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
   </Sequence>
 </Activity>
